@@ -18,7 +18,7 @@ parameter_list = []
 column = []
 merge_vars =[]
 # The api key, with him we send the email, can be found under setting in mandrill web.
-mandrill_api_key = '3gF70BI6RKf5XklWt5kf5Q'
+mandrill_api_key = ''
 with open(csv_file, 'rb') as csvfile:
     #read the CSV file
     spamreader = csv.reader(csvfile, skipinitialspace=True)
