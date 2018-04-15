@@ -20,7 +20,7 @@ pipeline {
         }
       }
     }
-    stage('') {
+    stage('sleep') {
       steps {
         sleep 1
       }
