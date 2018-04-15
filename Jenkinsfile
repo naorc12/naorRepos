@@ -1,10 +1,24 @@
 pipeline {
-    agent { docker 'python:3.5.1' }
-    stages {
-        stage('build') {
-            steps {
-                sh 'python --version'
-            }
-        }
+  agent {
+    node {
+      label 'any'
     }
+    
+  }
+  stages {
+    stage('build') {
+      parallel {
+        stage('build') {
+          steps {
+            sh 'python --version'
+          }
+        }
+        stage('Naor') {
+          steps {
+            echo 'naor!!'
+          }
+        }
+      }
+    }
+  }
 }
